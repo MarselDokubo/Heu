@@ -1,0 +1,113 @@
+:root {
+  --primaryColorDark1: #444444;
+  --primaryColorDark2: #555555;
+  --primaryColorDark3: #777777;
+  --primaryColorDark4: #999999;
+  --primaryColorLight1: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: normal normal normal 14px Helvetica, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--primaryColorDark2);
+  color: var(--primaryColorLight1);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  /* border-block-end: 2px solid var(--primaryColorDark1); */
+}
+
+header #logo {
+  font-weight: bold;
+}
+
+/* Main App Content */
+.main {
+  width: 100vw;
+  height: calc(100vh - 78px);
+  gap: 0.2rem;
+  display: flex;
+}
+
+/* PROPERTIES PANEL */
+.properties-panel {
+  width: 15%;
+  /* background: var(--primaryColorDark1); */
+}
+
+/* Canvas */
+
+.canvas-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--primaryColorDark1);
+  width: 80%;
+}
+#canvas {
+  background-color: var(--primaryColorLight1);
+}
+
+#control-panel {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-bottom: 5px; */
+  border-block: 1.7px solid var(--primaryColorDark1);
+  padding: 0.7rem 16px;
+}
+
+#control-panel > * {
+  margin-right: 10px;
+}
+
+#control-panel input {
+  width: 50px;
+  padding: 0.3rem;
+  font-weight: 300;
+  background-color: var(--primaryColorDark1);
+  color: var(--primaryColorLight1);
+  border: none;
+  border-radius: 2px;
+}
+
+#control-panel select {
+  border: none;
+  background-color: var(--primaryColorDark1);
+  color: var(--primaryColorLight1);
+  padding: 0.3rem;
+  border-radius: 2px;
+}
+/* TOOLBAR */
+.toolbar {
+  /* width: 5%; */
+  padding: 1.25rem 0.75rem;
+}
+
+.toolbar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.toolbar .tool {
+  border: var(--primaryColorDark1);
+  background-color: var(--primaryColorDark1);
+}

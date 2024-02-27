@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Heu 🖌️</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 id="logo">Hue 🎨</h1>
+    </header>
+    <div id="control-panel">
+      <div class="fill-color">
+        <label for="fillColor">Fill Color:</label>
+        <select name="fillColor" id="fillColor" class="style-property">
+          <option value="black" selected>black</option>
+          <option value="lightgray">lightgray</option>
+          <option value="antiquewhite">antiquewhite</option>
+          <option value="cadetblue">cadetblue</option>
+          <option value="goldenrod">goldenrod</option>
+        </select>
+      </div>
+      <div class="stroke-color">
+        <label for="strokeColor">Stroke Color:</label>
+        <select name="strokeColor" id="strokeColor" class="style-property">
+          <option value="black" selected>black</option>
+          <option value="lightgray">lightgray</option>
+          <option value="antiquewhite">antiquewhite</option>
+          <option value="cadetblue">cadetblue</option>
+          <option value="goldenrod">goldenrod</option>
+        </select>
+      </div>
+
+      <div class="stroke-width">
+        <label for="strokeWidth">Stroke:</label>
+        <input
+          type="number"
+          name="strokeWidth"
+          id="strokeWidth"
+          value="2"
+          class="style-property"
+        />
+      </div>
+      <div class="opacity">
+        <label for="opacity">Opacity:</label>
+        <input
+          type="number"
+          name="opacity"
+          id="opacity"
+          min="0"
+          max="1"
+          step="0.1"
+          value="1"
+          class="style-property"
+        />
+      </div>
+    </div>
+    <div class="main">
+      <div class="toolbar">
+        <div class="toolbar-container">
+          <div title="Selection Tool">
+            <svg
+              width="70"
+              height="70"
+              class="tool line"
+              data-shape="selection"
+            >
+              <line
+                x1="60"
+                y1="10"
+                x2="10"
+                y2="60"
+                stroke="white"
+                stroke-width="3"
+              />
+            </svg>
+          </div>
+          <div title="Line Segment Tool (/)">
+            <svg width="70" height="70" class="tool line" data-shape="line">
+              <line
+                x1="60"
+                y1="10"
+                x2="10"
+                y2="60"
+                stroke="white"
+                stroke-width="3"
+              />
+            </svg>
+          </div>
+          <div title="Rectangle Tool">
+            <svg width="70" height="70" class="tool line" data-shape="rect">
+              <line
+                x1="60"
+                y1="10"
+                x2="10"
+                y2="60"
+                stroke="white"
+                stroke-width="3"
+              />
+            </svg>
+          </div>
+          <div title="Circle Tool">
+            <svg width="70" height="70" class="tool line" data-shape="circle">
+              <line
+                x1="60"
+                y1="10"
+                x2="10"
+                y2="60"
+                stroke="white"
+                stroke-width="3"
+              />
+            </svg>
+          </div>
+          <div title="Polygon Tool">
+            <svg width="70" height="70" class="tool line" data-shape="polygon">
+              <line
+                x1="60"
+                y1="10"
+                x2="10"
+                y2="60"
+                stroke="white"
+                stroke-width="3"
+              />
+            </svg>
+          </div>
+
+          <div title="Zoom Tool">
+            <svg width="70" height="70" class="tool line" data-shape="zoom">
+              <line
+                x1="60"
+                y1="10"
+                x2="10"
+                y2="60"
+                stroke="white"
+                stroke-width="3"
+              />
+            </svg>
+          </div>
+          <div title="Eraser Tool">
+            <svg width="70" height="70" class="tool line" data-shape="eraser">
+              <line
+                x1="60"
+                y1="10"
+                x2="10"
+                y2="60"
+                stroke="white"
+                stroke-width="3"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="canvas-container">
+        <canvas id="canvas" height="450" width="900"></canvas>
+      </div>
+      <div class="properties-panel"></div>
+    </div>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
